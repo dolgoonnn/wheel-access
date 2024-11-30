@@ -1,6 +1,7 @@
+// Header.tsx
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Map, Accessibility } from 'lucide-react';
+import { Map, Accessibility, MessageCircle } from 'lucide-react';
 import { cn } from '../../utils/cn';
 
 export function Header() {
@@ -22,6 +23,10 @@ export function Header() {
           <NavLink to="/accessibility" className={navLinkClass}>
             <Accessibility className="w-5 h-5" />
             <span>Accessibility Check</span>
+          </NavLink>
+          <NavLink to="/complaints" className={navLinkClass}>
+            <MessageCircle className="w-5 h-5" />
+            <span>My Complaints</span>
           </NavLink>
         </div>
       </nav>
