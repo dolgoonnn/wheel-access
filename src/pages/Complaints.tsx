@@ -83,9 +83,9 @@ export function ComplaintsPage() {
     <div className="max-w-6xl px-4 py-8 mx-auto">
       <div className="flex items-center justify-between mb-8">
         <div>
-          <h1 className="mb-2 text-3xl font-bold">My Complaints</h1>
+          <h1 className="mb-2 text-3xl font-bold">Илгээсэн санал гомдол</h1>
           <p className="text-gray-600">
-            Track and manage your accessibility complaints
+            Та өөрийн илгээсэн санал гомдолын мэдээллийг харна уу.
           </p>
         </div>
         <Select value={filter} onValueChange={setFilter}>
@@ -105,8 +105,8 @@ export function ComplaintsPage() {
       <div className="grid grid-cols-1 gap-6 mb-8 md:grid-cols-3">
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl">Total</CardTitle>
-            <CardDescription>All complaints</CardDescription>
+            <CardTitle className="text-2xl">Нийт</CardTitle>
+            <CardDescription>Нийт санал гомдол</CardDescription>
           </CardHeader>
           <CardContent>
             <p className="text-4xl font-bold">{mockComplaints.length}</p>
@@ -114,8 +114,8 @@ export function ComplaintsPage() {
         </Card>
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl">Active</CardTitle>
-            <CardDescription>In progress complaints</CardDescription>
+            <CardTitle className="text-2xl">Шалгуулагдаж байгаа</CardTitle>
+            <CardDescription>Нийт шалгуулагдаж байгаа санал гомдол</CardDescription>
           </CardHeader>
           <CardContent>
             <p className="text-4xl font-bold">
@@ -129,8 +129,8 @@ export function ComplaintsPage() {
         </Card>
         <Card>
           <CardHeader>
-            <CardTitle className="text-2xl">Resolved</CardTitle>
-            <CardDescription>Completed complaints</CardDescription>
+            <CardTitle className="text-2xl">Шийдвэрлэгдсэн</CardTitle>
+            <CardDescription>Шийдвэрлэгдсэн нийт санал гомдол</CardDescription>
           </CardHeader>
           <CardContent>
             <p className="text-4xl font-bold">
@@ -146,10 +146,10 @@ export function ComplaintsPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Complaints List</CardTitle>
+          {/* <CardTitle>Complaints List</CardTitle>
           <CardDescription>
             View and manage your submitted complaints
-          </CardDescription>
+          </CardDescription> */}
         </CardHeader>
         <CardContent>
           <Table>

@@ -4,29 +4,33 @@ export const sampleLocations = [
     lat: 47.9133696,
     lng: 106.9351907,
     title: "Салбар-1",
-    description: "Мэдээлэгдсэн"
+    description: "Засварлагдсан",
+    status: 'SUCCESS'
   },
   {
     id: 2,
     lat: 47.915958,
     lng: 106.922316,
-    title: "British Museum",
-    description: "Засварлаж байна"
+    title: "Салбар-2",
+    description: "Засварлаж байна",
+    status: 'REVIEW'
   },
   {
     id: 3,
     lat: 47.912507,
     lng: 106.931672,
-    title: "St. Paul's Cathedral",
-    description: "Засварлагдсан"
+    title: "Салбар-3",
+    description: "Засварлагдсан",
+    status: 'SUCCESS'
   }
   ,
   {
     id: 4,
     lat: 47.912507,
     lng: 106.931672,
-    title: "St. Paul's Cathedral",
-    description: "Яаралтай анхаарах"
+    title: "Салбар-3",
+    description: "Яаралтай анхаарах",
+    status: 'REVIEW'
   },
   // Add more locations as needed
 ];

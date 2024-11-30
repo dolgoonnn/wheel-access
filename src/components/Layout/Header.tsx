@@ -18,15 +18,15 @@ export function Header() {
         <div className="flex gap-4">
           <NavLink to="/" className={navLinkClass}>
             <Map className="w-5 h-5" />
-            <span>Map</span>
+            <span>Maп</span>
           </NavLink>
           <NavLink to="/accessibility" className={navLinkClass}>
             <Accessibility className="w-5 h-5" />
-            <span>Accessibility Check</span>
+            <span>Хүртээмжтэй байдлын шалгалт</span>
           </NavLink>
           <NavLink to="/complaints" className={navLinkClass}>
             <MessageCircle className="w-5 h-5" />
-            <span>My Complaints</span>
+            <span>Санал гомдол</span>
           </NavLink>
         </div>
       </nav>

@@ -17,9 +17,9 @@ function App() {
               path="/"
               element={
                 <div className="max-w-6xl mx-auto">
-                  <h1 className="mb-6 text-3xl font-bold text-gray-800">
+                  {/* <h1 className="mb-6 text-3xl font-bold text-gray-800">
                     Interactive Map with Clusters
-                  </h1>
+                  </h1> */}
                   <div className="p-6 bg-white rounded-lg shadow-lg">
                     <MapComponent
                       locations={sampleLocations}

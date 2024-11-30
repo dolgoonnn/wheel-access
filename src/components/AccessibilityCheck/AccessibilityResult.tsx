@@ -12,22 +12,22 @@ export function AccessibilityResult({ score, issues = [], recommendations = [] }
     if (score >= 0.8) {
       return {
         icon: <CheckCircle className="w-8 h-8 text-green-500" />,
-        title: "Highly Accessible",
-        description: "This route appears to be wheelchair-friendly",
+        title: "Зорчиход асуудалгүй",
+        description: "Тэргэнцэртэй хүнд тохиромжтой зам",
         className: "bg-green-50 border-green-200",
       };
     } else if (score >= 0.5) {
       return {
         icon: <AlertTriangle className="w-8 h-8 text-yellow-500" />,
-        title: "Partially Accessible",
-        description: "This route may present some challenges",
+        title: "Тохиромжтой",
+        description: "Бага зэрэг асуудал гарах боломжтой.",
         className: "bg-yellow-50 border-yellow-200",
       };
     } else {
       return {
         icon: <XCircle className="w-8 h-8 text-red-500" />,
-        title: "Limited Accessibility",
-        description: "This route may be difficult for wheelchair users",
+        title: "Тохиромжгүй",
+        description: "Тэргэнцэртэй хүмүүст хүндрэлтэй.",
         className: "bg-red-50 border-red-200",
       };
     }
@@ -48,7 +48,7 @@ export function AccessibilityResult({ score, issues = [], recommendations = [] }
       <div className="mt-4">
         <div className="mb-2">
           <span className="text-sm font-medium text-gray-700">
-            Accessibility Score:
+            Тохиромжтой байх магадлал:
           </span>
           <span className="ml-2 text-lg font-bold">
             {Math.round(score * 100)}%
@@ -58,7 +58,7 @@ export function AccessibilityResult({ score, issues = [], recommendations = [] }
         {issues.length > 0 && (
           <div className="mt-4">
             <h4 className="text-sm font-medium text-gray-700 mb-2">
-              Identified Issues:
+              Илрүүлсэн асуудал:
             </h4>
             <ul className="list-disc list-inside space-y-1">
               {issues.map((issue, index) => (
@@ -73,7 +73,7 @@ export function AccessibilityResult({ score, issues = [], recommendations = [] }
         {recommendations && recommendations.length > 0 && (
           <div className="mt-4">
             <h4 className="text-sm font-medium text-gray-700 mb-2">
-              Recommendations:
+              Зөвлөмж:
             </h4>
             <ul className="list-disc list-inside space-y-1">
               {recommendations.map((recommendation, index) => (

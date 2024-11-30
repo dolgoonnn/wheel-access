@@ -29,39 +29,40 @@ function generateAnalysis(features: ImageFeatures): AccessibilityAnalysis {
 
   // Analyze path width
   if (features.pathWidth < 1.5) {
-    issues.push('Path width is less than the recommended 1.5 meters');
-    recommendations.push('Widen the path to at least 1.5 meters for wheelchair access');
+    issues.push('Замын өргөн 1.5 метрээс бага байна');
+    recommendations.push('Тэргэнцэртэй хүмүүст зориулж замыг дор хаяж 1.5 метр хүртэл өргөсгөх');
     score -= 0.2;
-  }
+}
 
-  // Analyze slope
-  if (features.slope > 8) {
-    issues.push('Slope exceeds the recommended maximum of 8 degrees');
-    recommendations.push('Reduce the slope or provide alternative accessible route');
+// Налуугийн шинжилгээ
+if (features.slope > 8) {
+    issues.push('Налуу зөвшөөрөгдсөн дээд хязгаараас давсан (8 градус)');
+    recommendations.push('Налуу бууруулах эсвэл өөр хүртээмжтэй замаар хангах');
     score -= 0.3;
-  }
+}
 
-  // Analyze stairs and ramps
-  if (features.hasStairs && !features.hasRamp) {
-    issues.push('Stairs present without an accompanying ramp');
-    recommendations.push('Install a ramp alongside stairs for wheelchair accessibility');
+// Шат болон налуу замын шинжилгээ
+if (features.hasStairs && !features.hasRamp) {
+    issues.push('Шат байгаа боловч налуу зам байхгүй');
+    recommendations.push('Шатны хажуугаар тэргэнцэртэй хүмүүст зориулж налуу зам суурилуулах');
     score -= 0.3;
-  }
+}
 
-  // Analyze handrails
-  if (!features.hasHandrails) {
-    issues.push('No handrails detected');
-    recommendations.push('Install handrails for additional support and safety');
+// Бариул шинжилгээ
+if (!features.hasHandrails) {
+    issues.push('Бариул илрээгүй');
+    recommendations.push('Дэмжлэг болон аюулгүй байдлыг сайжруулахын тулд бариул суурилуулах');
     score -= 0.2;
-  }
+}
 
-  // Ensure we have at least one issue and recommendation
-  if (issues.length === 0) {
-    issues.push('No significant accessibility issues detected');
-  }
-  if (recommendations.length === 0) {
-    recommendations.push('Maintain current accessibility standards');
-  }
+// Асуудал байгаа эсэхийг баталгаажуулах
+if (issues.length === 0) {
+    issues.push('Ямар нэг чухал хүртээмжийн асуудал илрээгүй');
+}
+
+if (recommendations.length === 0) {
+    recommendations.push('Одоогийн хүртээмжийн стандартыг хадгалах');
+}
 
   // Ensure score stays within 0-1 range
   score = Math.max(0, Math.min(1, score));

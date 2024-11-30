@@ -33,7 +33,7 @@ export function AccessibilityPage() {
   return (
     <div className="max-w-3xl mx-auto">
       <h1 className="text-3xl font-bold text-gray-800 mb-6">
-        Accessibility Route Analyzer
+        Та зургаа оруулна
       </h1>
       
       <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -52,7 +52,7 @@ export function AccessibilityPage() {
         {selectedImage && (
           <div className="mt-8">
             <h2 className="text-xl font-semibold text-gray-800 mb-4">
-              Uploaded Image
+              Оруулсан зураг
             </h2>
             <img
               src={selectedImage}
@@ -72,7 +72,7 @@ export function AccessibilityPage() {
         {analysisResult && !isAnalyzing && (
           <div className="mt-6">
             <h2 className="text-xl font-semibold text-gray-800 mb-4">
-              Analysis Results
+              Үр дүн
             </h2>
             <AccessibilityResult
               score={analysisResult.score}
