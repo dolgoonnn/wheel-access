@@ -37,27 +37,27 @@ interface Complaint {
 const mockComplaints: Complaint[] = [
   {
     id: '1',
-    title: 'Missing Wheelchair Ramp',
-    description: 'The store entrance lacks a wheelchair ramp',
-    location: '123 Main St',
+    title: 'Хүний эрхийн хүрэлцээгүй орчин',
+    description: 'Дэлгүүрийн орцны хүрэлцээгүй орчин',
+    location: 'Салбар 1',
     status: 'in-progress',
-    date: '2024-03-15',
+    date: '2024-12-01',
   },
   {
     id: '2',
-    title: 'Broken Elevator',
-    description: 'Building elevator has been out of service for 2 weeks',
-    location: '456 Oak Ave',
+    title: 'Тэсэлгээний систем алдагдсан',
+    description: 'Байшинд тэсэлгээний систем алдагдсан',
+    location: 'Салбар 2',
     status: 'pending',
-    date: '2024-03-20',
+    date: '2024-11-01',
   },
   {
     id: '3',
-    title: 'Inaccessible Bathroom',
-    description: 'Restaurant bathroom door is too narrow for wheelchair access',
-    location: '789 Pine St',
+    title: 'Хүний эрхийн хүрэлцээгүй орчин',
+    description: 'Рестораны орцны хүрэлцээгүй орчин',
+    location: 'Салбар 3',
     status: 'resolved',
-    date: '2024-03-10',
+    date: '2024-11-01',
   },
 ];
 
@@ -93,11 +93,11 @@ export function ComplaintsPage() {
             <SelectValue placeholder="Filter by status" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="all">All Status</SelectItem>
-            <SelectItem value="pending">Pending</SelectItem>
-            <SelectItem value="in-progress">In Progress</SelectItem>
-            <SelectItem value="resolved">Resolved</SelectItem>
-            <SelectItem value="rejected">Rejected</SelectItem>
+            <SelectItem value="all">Нийт</SelectItem>
+            <SelectItem value="pending">Хүсэлт илгээгдсэн</SelectItem>
+            <SelectItem value="in-progress">Шалгуулагдаж байгаа</SelectItem>
+            <SelectItem value="resolved">Шийдвэрлэгдсэн</SelectItem>
+            <SelectItem value="rejected">Татгалзсан</SelectItem>
           </SelectContent>
         </Select>
       </div>
